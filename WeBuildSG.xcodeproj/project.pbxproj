@@ -15,6 +15,8 @@
 		ABB7CB151C6338DE00352827 /* WeBuildSGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB141C6338DE00352827 /* WeBuildSGTests.swift */; };
 		ABB7CB201C633B3F00352827 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB1F1C633B3F00352827 /* NewViewController.swift */; };
 		ABB7CB221C633B7400352827 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB211C633B7400352827 /* TableViewCell.swift */; };
+		ABC94ED21C63502F00D92EBE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC94ED01C63502F00D92EBE /* Section.swift */; };
+		ABC94ED31C63502F00D92EBE /* SectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC94ED11C63502F00D92EBE /* SectionsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		ABB7CB161C6338DE00352827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB7CB1F1C633B3F00352827 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		ABB7CB211C633B7400352827 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		ABC94ED01C63502F00D92EBE /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		ABC94ED11C63502F00D92EBE /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				ABB7CAFF1C6338DE00352827 /* AppDelegate.swift */,
 				ABB7CB011C6338DE00352827 /* ViewController.swift */,
+				ABC94ED01C63502F00D92EBE /* Section.swift */,
+				ABC94ED11C63502F00D92EBE /* SectionsData.swift */,
 				ABB7CB1F1C633B3F00352827 /* NewViewController.swift */,
 				ABB7CB211C633B7400352827 /* TableViewCell.swift */,
 				ABB7CB031C6338DE00352827 /* Main.storyboard */,
@@ -205,10 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC94ED21C63502F00D92EBE /* Section.swift in Sources */,
 				ABB7CB201C633B3F00352827 /* NewViewController.swift in Sources */,
 				ABB7CB221C633B7400352827 /* TableViewCell.swift in Sources */,
 				ABB7CB021C6338DE00352827 /* ViewController.swift in Sources */,
 				ABB7CB001C6338DE00352827 /* AppDelegate.swift in Sources */,
+				ABC94ED31C63502F00D92EBE /* SectionsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +406,7 @@
 				ABB7CB1B1C6338DE00352827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABB7CB1C1C6338DE00352827 /* Build configuration list for PBXNativeTarget "WeBuildSGTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +415,7 @@
 				ABB7CB1E1C6338DE00352827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,9 +12,11 @@ struct Section {
     
     var heading: String
     var items: [String]
+    var venue: String
     
-    init(title: String, objects: [String]) {
+    init(title: String, objects: [String], place: String) {
         heading = title
         items = objects
+        venue = place
     }
 }

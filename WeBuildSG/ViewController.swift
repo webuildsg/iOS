@@ -4,31 +4,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    var objects = [String]()
+    var sections: [Section] = SectionsData().getSectionsFromData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.objects.append("iPhone")
-        self.objects.append("Mac")
-        self.objects.append("Windows")
-        self.objects.append("Linux")
-        
-        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.objects.count
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return sections.count
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].heading
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections[section].items.count 
+    }
+        
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
-        cell.titleLabel.text = self.objects[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        cell.textLabel!.text = sections[indexPath.section].items[indexPath.row]
         return cell
     }
     
@@ -41,8 +41,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let upcoming: NewViewController = segue.destinationViewController as! NewViewController
             
             let indexPath = self.tableView.indexPathForSelectedRow!
-            print(indexPath)
-            let titleString = self.objects[indexPath.row]
+
+            let titleString = sections[indexPath.section].items[indexPath.row] + " at " + sections[indexPath.section].venue
             upcoming.titleString = titleString
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }

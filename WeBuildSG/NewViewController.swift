@@ -8,7 +8,6 @@ class NewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.titleLabel.text = self.titleString
     }
     
