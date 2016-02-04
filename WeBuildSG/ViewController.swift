@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Table View Buttons
-//
-//  Created by Sayanee Basu on 30/1/16.
-//  Copyright © 2016 Sayanee Basu. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
