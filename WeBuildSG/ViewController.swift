@@ -15,7 +15,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.objects.append("Windows")
         self.objects.append("Linux")
         
-        print("Hello")
         self.tableView.reloadData()
     }
     
@@ -34,7 +33,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Selected row")
         self.performSegueWithIdentifier("showView", sender: self)
     }
     
