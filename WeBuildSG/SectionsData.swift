@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class SectionsData {
     func getSectionsFromData() -> [Section] {
@@ -19,6 +20,13 @@ class SectionsData {
         sectionsArray.append(animals)
         sectionsArray.append(vehicles)
         sectionsArray.append(movies)
+        
+        Alamofire.request(.GET, "https://webuild.sg/api/v1/events?n=10")
+            .responseJSON { response in
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
         
         return sectionsArray
     }
