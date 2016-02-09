@@ -24,7 +24,14 @@ class SectionsData {
         Alamofire.request(.GET, "https://webuild.sg/api/v1/events?n=10")
             .responseJSON { response in
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                    for index in 0...9 {
+                        let eventName = JSON["events"]!![index]["name"]!
+                        let startTime = JSON["events"]!![index]["start_time"]!
+                        print("Event: \(eventName!)")
+                        print("When: \(startTime!)")
+                        print("\r\n")
+                    }
+                    
                 }
         }
         
