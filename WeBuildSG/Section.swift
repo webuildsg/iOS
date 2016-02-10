@@ -8,15 +8,20 @@
 
 import Foundation
 
+struct Item {
+    var name: String
+    var description: String
+    var by: String
+    var rsvp: String
+}
+
 struct Section {
     
     var heading: String
-    var items: [String]
-    var venue: String
+    var objects: [Item]
     
-    init(title: String, objects: [String], place: String) {
+    init(title: String, items: [Item]) {
         heading = title
-        items = objects
-        venue = place
+        objects = items
     }
 }

@@ -31,12 +31,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].items.count 
+        return sections[section].objects.count
     }
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        cell.textLabel!.text = sections[indexPath.section].items[indexPath.row]
+        cell.textLabel!.text = sections[indexPath.section].objects[indexPath.row].name
         return cell
     }
     
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             let indexPath = self.tableView.indexPathForSelectedRow!
 
-            let titleString = sections[indexPath.section].items[indexPath.row] + " at " + sections[indexPath.section].venue
+            let titleString = sections[indexPath.section].objects[indexPath.row].name
             upcoming.titleString = titleString
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
