@@ -14,12 +14,7 @@ class SectionsData {
         var sectionsArray = [Section]()
         
         let animals = Section(title: "Animals", objects:  ["Cats", "Dogs", "Lions", "Birds"], place: "Jungle")
-        let vehicles = Section(title: "Vehicles", objects: ["Cars", "Bicycle"], place: "Road")
-        let movies = Section(title: "Movies", objects: ["Sound", "Music"], place: "Cinema")
-        
         sectionsArray.append(animals)
-        sectionsArray.append(vehicles)
-        sectionsArray.append(movies)
         
         Alamofire.request(.GET, "https://webuild.sg/api/v1/events?n=10")
             .responseJSON { response in
@@ -27,18 +22,11 @@ class SectionsData {
                     var openEvents = Section(title: "Open Events", objects: [], place: "Rooms")
                     for index in 0...9 {
                         let eventName = JSON["events"]!![index]["name"]! as! String
-                        // let startTime = JSON["events"]!![index]["start_time"]!
-                        print("Event: \(eventName)")
-                        // print("When: \(startTime!)")
-                        print("\r\n")
-                        
                         openEvents.items.append(eventName)
                     }
                     
                     sectionsArray.append(openEvents)
-                    
                     return callback(sections: sectionsArray)
-                    
                 }
         }
     }
