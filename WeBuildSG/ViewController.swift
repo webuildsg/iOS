@@ -47,11 +47,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showView") {
             let upcoming: NewViewController = segue.destinationViewController as! NewViewController
-            
             let indexPath = self.tableView.indexPathForSelectedRow!
-
             let titleString = sections[indexPath.section].objects[indexPath.row].name
+            let descriptionString = sections[indexPath.section].objects[indexPath.row].description
+            
             upcoming.titleString = titleString
+            upcoming.descriptionString = descriptionString
+            
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
