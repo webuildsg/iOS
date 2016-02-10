@@ -4,10 +4,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var sections: [Section] = SectionsData().getSectionsFromData()
+    var sections: [Section] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SectionsData().getSectionsFromData({
+            sections in
+            
+            self.sections = sections
+            
+            self.tableView.reloadData()
+        })
     }
     
     override func didReceiveMemoryWarning() {
