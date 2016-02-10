@@ -23,12 +23,18 @@ class SectionsData {
         Alamofire.request(.GET, "https://webuild.sg/api/v1/events?n=10")
             .responseJSON { response in
                 if let JSON = response.result.value {
-                    var openEvents = Section(title: "Open Events", items: [])
+                    var openEventsItems = [Item]()
+
                     for index in 0...9 {
                         let eventName = JSON["events"]!![index]["name"]! as! String
-                        print(eventName)
+                        let description = JSON["events"]!![index]["description"]! as! String
+                        
+                        openEventsItems.append(Item(name: eventName, description: description, by: "By by by by", rsvp: "2"))
                     }
                     
+                    let openEvents = Section(title: "Open Events", items: openEventsItems)
+                    sectionsArray.append(openEvents)
+                    print(sectionsArray)
                     return callback(sections: sectionsArray)
                 }
         }
