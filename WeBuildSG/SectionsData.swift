@@ -12,14 +12,6 @@ import Alamofire
 class SectionsData {
     func getSectionsFromData(callback: (sections: [Section]) -> ()) {
         var sectionsArray = [Section]()
-        
-        var items = [Item]()
-        items.append(Item(name: "Hello", description: "Description", date: "Tomorrow", by: "By by by", rsvp: "23"))
-        items.append(Item(name: "Hello 2", description: "Description 2", date: "Today", by: "By by by by", rsvp: "2"))
-        
-        let animals = Section(title: "Animals", items: items)
-        sectionsArray.append(animals)
-        
         // let prodUrl = "https://webuild.sg/api/v1/events?n=10"
         let devUrl = "http://localhost:4000/api/v1/events?n=10"
         
@@ -38,7 +30,26 @@ class SectionsData {
                     
                     let openEvents = Section(title: "Open Events", items: openEventsItems)
                     sectionsArray.append(openEvents)
-                    return callback(sections: sectionsArray)
+                    
+                    Alamofire.request(.GET, "http://localhost:4000/api/v1/repos?n=10")
+                        .responseJSON { response in
+                            if let JSON = response.result.value {
+                                var openReposItems = [Item]()
+                                
+                                for index in 0...9 {
+                                    let name = JSON["repos"]!![index]["name"]! as! String
+                                    let description = JSON["repos"]!![index]["description"]! as! String
+                                    let date = JSON["repos"]!![index]["pushed_at"]! as! String
+                                    
+                                    openReposItems.append(Item(name: name, description: description, date: date, by: "By by by by", rsvp: "2"))
+                                }
+                                
+                                let openRepos = Section(title: "Open Repositories", items: openReposItems)
+                                sectionsArray.append(openRepos)
+                                
+                                return callback(sections: sectionsArray)
+                            }
+                    }
                 }
         }
     }
