@@ -9,10 +9,11 @@
 import Foundation
 
 struct Item {
-    var name: String
-    var description: String
-    var by: String
-    var rsvp: String
+    var name: String // Event / Repository name
+    var description: String // Description
+    var date: String // Event date / Repository pushed date
+    var by: String // Event group / Repository owner
+    var rsvp: String  
 }
 
 struct Section {

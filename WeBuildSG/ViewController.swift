@@ -33,20 +33,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].objects.count
     }
-        
+    
+    // Table view
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        cell.textLabel!.text = sections[indexPath.section].objects[indexPath.row].name
-        return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? TableViewCell
+        
+        cell!.titleLabel!.text = sections[indexPath.section].objects[indexPath.row].name
+        cell!.datetimeLabel!.text = "on " + sections[indexPath.section].objects[indexPath.row].date
+        
+        return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showView", sender: self)
     }
     
+    // Detail view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showView") {
             let upcoming: NewViewController = segue.destinationViewController as! NewViewController
+            
             let indexPath = self.tableView.indexPathForSelectedRow!
             let titleString = sections[indexPath.section].objects[indexPath.row].name
             let descriptionString = sections[indexPath.section].objects[indexPath.row].description

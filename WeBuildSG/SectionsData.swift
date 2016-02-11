@@ -14,8 +14,8 @@ class SectionsData {
         var sectionsArray = [Section]()
         
         var items = [Item]()
-        items.append(Item(name: "Hello", description: "Description", by: "By by by", rsvp: "23"))
-        items.append(Item(name: "Hello 2", description: "Description 2", by: "By by by by", rsvp: "2"))
+        items.append(Item(name: "Hello", description: "Description", date: "Tomorrow", by: "By by by", rsvp: "23"))
+        items.append(Item(name: "Hello 2", description: "Description 2", date: "Today", by: "By by by by", rsvp: "2"))
         
         let animals = Section(title: "Animals", items: items)
         sectionsArray.append(animals)
@@ -28,8 +28,9 @@ class SectionsData {
                     for index in 0...9 {
                         let eventName = JSON["events"]!![index]["name"]! as! String
                         let description = JSON["events"]!![index]["description"]! as! String
+                        let date = JSON["events"]!![index]["formatted_time"]! as! String
                         
-                        openEventsItems.append(Item(name: eventName, description: description, by: "By by by by", rsvp: "2"))
+                        openEventsItems.append(Item(name: eventName, description: description, date: date, by: "By by by by", rsvp: "2"))
                     }
                     
                     let openEvents = Section(title: "Open Events", items: openEventsItems)
