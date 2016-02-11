@@ -42,7 +42,7 @@
 		ABB7CB101C6338DE00352827 /* WeBuildSGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeBuildSGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB7CB141C6338DE00352827 /* WeBuildSGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeBuildSGTests.swift; sourceTree = "<group>"; };
 		ABB7CB161C6338DE00352827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABB7CB1F1C633B3F00352827 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		ABB7CB1F1C633B3F00352827 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		ABB7CB211C633B7400352827 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		ABC94ED01C63502F00D92EBE /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		ABC94ED11C63502F00D92EBE /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
