@@ -13,9 +13,8 @@ class SectionsData {
     func getSectionsFromData(callback: (sections: [Section]) -> ()) {
         var sectionsArray = [Section]()
         // let prodUrl = "https://webuild.sg/api/v1/events?n=10"
-        let devUrl = "http://localhost:4000/api/v1/events?n=10"
         
-        Alamofire.request(.GET, devUrl)
+        Alamofire.request(.GET, "http://localhost:4000/api/v1/events?n=10")
             .responseJSON { response in
                 if let JSON = response.result.value {
                     var openEventsItems = [Item]()
