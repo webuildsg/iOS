@@ -26,38 +26,51 @@
                                         <rect key="frame" x="0.0" y="114" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBI-f2-uIT" id="GTK-pk-uaM">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kza-zV-rLb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqf-zc-T31">
                                                     <rect key="frame" x="8" y="8" width="551" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="HTI-pO-dC2"/>
+                                                        <constraint firstAttribute="height" constant="21" id="UFZ-bw-PkQ"/>
+                                                        <constraint firstAttribute="height" constant="21" id="vcL-CF-yrT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="UFZ-bw-PkQ"/>
+                                                            <exclude reference="vcL-CF-yrT"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9f-ek-x4q">
-                                                    <rect key="frame" x="8" y="37" width="551" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-Dl-b2X">
+                                                    <rect key="frame" x="8" y="61" width="551" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kza-zV-rLb" firstAttribute="top" secondItem="GTK-pk-uaM" secondAttribute="topMargin" id="0cI-hF-qyo"/>
-                                                <constraint firstItem="kza-zV-rLb" firstAttribute="leading" secondItem="D9f-ek-x4q" secondAttribute="leading" id="2su-q1-qlb"/>
-                                                <constraint firstItem="kza-zV-rLb" firstAttribute="leading" secondItem="GTK-pk-uaM" secondAttribute="leadingMargin" id="RbQ-7p-R55"/>
-                                                <constraint firstItem="D9f-ek-x4q" firstAttribute="top" secondItem="kza-zV-rLb" secondAttribute="bottom" constant="8" symbolic="YES" id="ZpC-IR-aXl"/>
-                                                <constraint firstItem="kza-zV-rLb" firstAttribute="trailing" secondItem="GTK-pk-uaM" secondAttribute="trailingMargin" id="c0S-Me-V3n"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="D9f-ek-x4q" secondAttribute="bottom" constant="23.5" id="kJB-KP-Mee"/>
-                                                <constraint firstItem="D9f-ek-x4q" firstAttribute="trailing" secondItem="kza-zV-rLb" secondAttribute="trailing" id="veP-cp-Ome"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="kqf-zc-T31" secondAttribute="leading" id="D04-nY-8CH"/>
+                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="top" secondItem="kqf-zc-T31" secondAttribute="bottom" constant="32" id="Dhn-uq-faL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xfs-Dl-b2X" secondAttribute="bottom" id="LnS-Je-TRo"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="xfs-Dl-b2X" secondAttribute="leading" id="PNG-zQ-pJi"/>
+                                                <constraint firstAttribute="topMargin" secondItem="kqf-zc-T31" secondAttribute="top" id="aBb-oy-Cyn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xfs-Dl-b2X" secondAttribute="trailing" id="dh2-CJ-O0K"/>
+                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="top" secondItem="kqf-zc-T31" secondAttribute="bottom" id="itf-97-AqR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kqf-zc-T31" secondAttribute="trailing" id="mmD-ql-6Vv"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Dhn-uq-faL"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="datetimeLabel" destination="D9f-ek-x4q" id="51b-GX-EXA"/>
-                                            <outlet property="titleLabel" destination="kza-zV-rLb" id="XZy-HM-amc"/>
+                                            <outlet property="datetimeLabel" destination="xfs-Dl-b2X" id="6pj-GG-c5r"/>
+                                            <outlet property="titleLabel" destination="kqf-zc-T31" id="ipf-d8-4ih"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

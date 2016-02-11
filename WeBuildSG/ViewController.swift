@@ -12,8 +12,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         SectionsData().getSectionsFromData({
             sections in
             
-            self.tableView.estimatedRowHeight = self.tableView.rowHeight
-            self.tableView.rowHeight = UITableViewAutomaticDimension
             self.sections = sections
             self.tableView.reloadData()
         })
