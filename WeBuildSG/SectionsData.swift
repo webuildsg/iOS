@@ -34,7 +34,6 @@ class SectionsData {
                     
                     let openEvents = Section(title: "Open Events", items: openEventsItems)
                     sectionsArray.append(openEvents)
-                    print(sectionsArray)
                     return callback(sections: sectionsArray)
                 }
         }
