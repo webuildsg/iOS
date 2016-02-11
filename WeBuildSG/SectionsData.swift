@@ -20,7 +20,10 @@ class SectionsData {
         let animals = Section(title: "Animals", items: items)
         sectionsArray.append(animals)
         
-        Alamofire.request(.GET, "http://localhost:4000/api/v1/events?n=10")
+        // let prodUrl = "https://webuild.sg/api/v1/events?n=10"
+        let devUrl = "http://localhost:4000/api/v1/events?n=10"
+        
+        Alamofire.request(.GET, devUrl)
             .responseJSON { response in
                 if let JSON = response.result.value {
                     var openEventsItems = [Item]()
