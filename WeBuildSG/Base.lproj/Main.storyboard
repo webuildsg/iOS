@@ -26,16 +26,19 @@
                                         <rect key="frame" x="0.0" y="114" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBI-f2-uIT" id="GTK-pk-uaM">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kza-zV-rLb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kza-zV-rLb">
                                                     <rect key="frame" x="8" y="8" width="551" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="HTI-pO-dC2"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9f-ek-x4q">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9f-ek-x4q">
                                                     <rect key="frame" x="8" y="37" width="551" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,16 +46,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="topMargin" secondItem="kza-zV-rLb" secondAttribute="top" id="bz6-Sr-v4v"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="kza-zV-rLb" secondAttribute="leading" id="oId-2d-k9x"/>
-                                                <constraint firstItem="D9f-ek-x4q" firstAttribute="top" secondItem="kza-zV-rLb" secondAttribute="bottom" constant="8" id="sjx-2e-oSQ"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="D9f-ek-x4q" secondAttribute="leading" id="wJo-Rp-0aG"/>
+                                                <constraint firstItem="kza-zV-rLb" firstAttribute="top" secondItem="GTK-pk-uaM" secondAttribute="topMargin" id="0cI-hF-qyo"/>
+                                                <constraint firstItem="kza-zV-rLb" firstAttribute="leading" secondItem="D9f-ek-x4q" secondAttribute="leading" id="2su-q1-qlb"/>
+                                                <constraint firstItem="kza-zV-rLb" firstAttribute="leading" secondItem="GTK-pk-uaM" secondAttribute="leadingMargin" id="RbQ-7p-R55"/>
+                                                <constraint firstItem="D9f-ek-x4q" firstAttribute="top" secondItem="kza-zV-rLb" secondAttribute="bottom" constant="8" symbolic="YES" id="ZpC-IR-aXl"/>
+                                                <constraint firstItem="kza-zV-rLb" firstAttribute="trailing" secondItem="GTK-pk-uaM" secondAttribute="trailingMargin" id="c0S-Me-V3n"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="D9f-ek-x4q" secondAttribute="bottom" constant="23.5" id="kJB-KP-Mee"/>
+                                                <constraint firstItem="D9f-ek-x4q" firstAttribute="trailing" secondItem="kza-zV-rLb" secondAttribute="trailing" id="veP-cp-Ome"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="D9f-ek-x4q" secondAttribute="trailing" constant="41" id="IAG-19-b9T"/>
-                                            <constraint firstAttribute="trailing" secondItem="kza-zV-rLb" secondAttribute="trailing" constant="41" id="z2h-z5-QDX"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="datetimeLabel" destination="D9f-ek-x4q" id="51b-GX-EXA"/>
                                             <outlet property="titleLabel" destination="kza-zV-rLb" id="XZy-HM-amc"/>
