@@ -82,12 +82,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let descriptionString = sections[indexPath.section].objects[indexPath.row].description
             let urlString = sections[indexPath.section].objects[indexPath.row].url
             let typeString = sections[indexPath.section].objects[indexPath.row].type
+            let byString = sections[indexPath.section].objects[indexPath.row].by
             
             upcoming.titleString = titleString
             upcoming.dateString = dateString
             upcoming.descriptionString = descriptionString
             upcoming.urlString = urlString
             upcoming.typeString = typeString
+            upcoming.byString = byString
             
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
             

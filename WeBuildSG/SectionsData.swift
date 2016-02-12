@@ -27,7 +27,7 @@ class SectionsData {
                         let description = JSON["events"]!![index]["description"]! as! String
                         let date = JSON["events"]!![index]["formatted_time"]! as! String
                         let url = JSON["events"]!![index]["url"]! as! String
-                        let by = JSON["events"]!![index]["group_url"]! as! String
+                        let by = JSON["events"]!![index]["group_name"]! as! String
                         
                         openEventsItems.append(Item(name: eventName, description: description, date: date, type: "events", url: url, by: by, rsvp: "2"))
                     }
@@ -45,7 +45,12 @@ class SectionsData {
                                     let description = JSON["repos"]!![index]["description"]! as! String
                                     let date = JSON["repos"]!![index]["pushed_at"]! as! String
                                     let url = JSON["repos"]!![index]["html_url"]! as! String
-                                    let by = JSON["repos"]!![index]["owner"]!!["login"]! as! String
+                                    
+                                    let owner = JSON["repos"]!![index]["owner"]!!["login"]! as! String
+                                    let stars = JSON["repos"]!![index]["stargazers_count"]!
+                                    let language = JSON["repos"]!![index]["language"]! as! String
+                                    
+                                    let by = "\(owner) | \(stars!)" + " ⭐️ | " + language
                                     
                                     openReposItems.append(Item(name: name, description: description, date: date, type: "repos", url: url, by: by, rsvp: "2"))
                                 }
