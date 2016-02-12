@@ -42,7 +42,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? TableViewCell
         
         cell!.titleLabel!.text = sections[indexPath.section].objects[indexPath.row].name
-        cell!.datetimeLabel!.text = "on " + sections[indexPath.section].objects[indexPath.row].date
+        
+        let type = sections[indexPath.section].objects[indexPath.row].type
+        let date = sections[indexPath.section].objects[indexPath.row].date
+        
+        if (type == "events") {
+            cell!.datetimeLabel!.text = "on " + date
+        } else {
+            cell!.datetimeLabel!.text = "updated " + date
+        }
         
         return cell!
     }

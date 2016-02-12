@@ -43,7 +43,7 @@ class SectionsData {
                                 for index in 0...9 {
                                     let name = JSON["repos"]!![index]["name"]! as! String
                                     let description = JSON["repos"]!![index]["description"]! as! String
-                                    let date = JSON["repos"]!![index]["pushed_at"]! as! String
+                                    let date = JSON["repos"]!![index]["formatted_time"]! as! String
                                     let url = JSON["repos"]!![index]["html_url"]! as! String
                                     
                                     let owner = JSON["repos"]!![index]["owner"]!!["login"]! as! String

@@ -24,13 +24,15 @@ class NewViewController: UIViewController {
                 
         if (self.typeString == "events") {
             openUrlButton.setTitle("Register for event", forState: .Normal)
+            self.dateLabel.text = "on " + self.dateString
         } else {
             openUrlButton.setTitle("View code", forState: .Normal)
+            self.dateLabel.text = "updated " + self.dateString
         }
         
         self.titleLabel.text = self.titleString
         self.titleLabel.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
-        self.dateLabel.text = "on " + self.dateString
+        
         self.descriptionLabel.text = self.descriptionString
         self.byLabel.text = "by " + self.byString
         
