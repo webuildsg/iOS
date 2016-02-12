@@ -19,7 +19,7 @@ class NewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         if (self.typeString == "events") {
             openUrlButton.setTitle("Register for event", forState: .Normal)
         } else {
@@ -29,6 +29,8 @@ class NewViewController: UIViewController {
         self.titleLabel.text = self.titleString
         self.dateLabel.text = "on " + self.dateString
         self.descriptionLabel.text = self.descriptionString
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     override func didReceiveMemoryWarning() {

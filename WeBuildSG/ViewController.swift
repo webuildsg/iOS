@@ -90,6 +90,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             upcoming.typeString = typeString
             
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
     }
     
