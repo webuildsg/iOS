@@ -11,6 +11,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 193/255.0, green: 26/255.0, blue: 24/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         SectionsData().getSectionsFromData({
             sections in
             
@@ -35,16 +38,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return sections[section].objects.count
     }
     
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        self.tableView.backgroundColor = UIColor.whiteColor()
-        
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.font = UIFont(name: "Futura", size: 30)!
-        header.textLabel?.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
-        header.textLabel?.textAlignment = NSTextAlignment.Center
-    }
-    
-    // Table view
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? TableViewCell
         
@@ -54,8 +47,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell!
     }
     
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        self.tableView.backgroundColor = UIColor.whiteColor()
+        let headerFrame = tableView.frame
+        
+        let title = UILabel()
+        title.frame =  CGRectMake(10, 30, headerFrame.size.width-20, 40)
+        title.font = UIFont(name: "Futura", size: 30)!
+        title.text = self.tableView(tableView, titleForHeaderInSection: section)
+        title.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
+        
+        let headerView:UIView = UIView(frame: CGRectMake(0, 0, headerFrame.size.width, headerFrame.size.height))
+        headerView.addSubview(title)
+        
+        return headerView
+    }
+    
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 120
+        return 100
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
