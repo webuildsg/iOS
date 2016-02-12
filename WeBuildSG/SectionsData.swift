@@ -12,12 +12,12 @@ import Alamofire
 class SectionsData {
     func getSectionsFromData(callback: (sections: [Section]) -> ()) {
         var sectionsArray = [Section]()
-         let prodEventsUrl = "https://webuild.sg/api/v1/events?n=10"
-         let prodReposUrl = "https://webuild.sg/api/v1/repos?n=10"
-        // let devEventsUrl = "http://localhost:4000/api/v1/events?n=10"
-        // let devReposUrl = "http://localhost:4000/api/v1/events?n=10"
+//         let prodEventsUrl = "https://webuild.sg/api/v1/events?n=10"
+//         let prodReposUrl = "https://webuild.sg/api/v1/repos?n=10"
+        let devEventsUrl = "http://localhost:4000/api/v1/events?n=10"
+        let devReposUrl = "http://localhost:4000/api/v1/repos?n=10"
         
-        Alamofire.request(.GET, prodEventsUrl)
+        Alamofire.request(.GET, devEventsUrl)
             .responseJSON { response in
                 if let JSON = response.result.value {
                     var openEventsItems = [Item]()
@@ -33,7 +33,7 @@ class SectionsData {
                     let openEvents = Section(title: "Open Events", items: openEventsItems)
                     sectionsArray.append(openEvents)
                     
-                    Alamofire.request(.GET, prodReposUrl)
+                    Alamofire.request(.GET, devReposUrl)
                         .responseJSON { response in
                             if let JSON = response.result.value {
                                 var openReposItems = [Item]()

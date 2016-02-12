@@ -6,6 +6,10 @@ class NewViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBAction func openUrl(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.google.com")!)
+    }
+    
     var titleString: String!
     var dateString: String!
     var descriptionString: String!
