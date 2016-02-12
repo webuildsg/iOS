@@ -237,6 +237,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="8c3-8R-W2Q" id="jFI-CM-M7B"/>
                         <outlet property="descriptionLabel" destination="Aff-5n-mmA" id="v7B-bG-nlj"/>
+                        <outlet property="openUrlButton" destination="LbU-qP-CmA" id="dHZ-hx-k0c"/>
                         <outlet property="titleLabel" destination="YDT-6q-eJo" id="p4o-Iq-pf3"/>
                     </connections>
                 </viewController>
