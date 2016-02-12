@@ -52,7 +52,14 @@ class SectionsData {
                                     
                                     let by = "\(owner) | \(stars!)" + " ⭐️ | " + language
                                     
-                                    openReposItems.append(Item(name: name, description: description, date: date, type: "repos", url: url, by: by, rsvp: "2"))
+                                    openReposItems.append(Item(
+                                        name: name,
+                                        description: description,
+                                        date: date,
+                                        type: "repos",
+                                        url: url,
+                                        by: by,
+                                        rsvp: "2"))
                                 }
                                 
                                 let openRepos = Section(title: "Open Repos 🚀 🖥 🤖", items: openReposItems)
