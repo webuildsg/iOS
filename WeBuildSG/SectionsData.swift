@@ -26,8 +26,10 @@ class SectionsData {
                         let eventName = JSON["events"]!![index]["name"]! as! String
                         let description = JSON["events"]!![index]["description"]! as! String
                         let date = JSON["events"]!![index]["formatted_time"]! as! String
+                        let url = JSON["events"]!![index]["url"]! as! String
+                        let by = JSON["events"]!![index]["group_url"]! as! String
                         
-                        openEventsItems.append(Item(name: eventName, description: description, date: date, by: "By by by by", rsvp: "2"))
+                        openEventsItems.append(Item(name: eventName, description: description, date: date, type: "events", url: url, by: by, rsvp: "2"))
                     }
                     
                     let openEvents = Section(title: "Open Events", items: openEventsItems)
@@ -42,8 +44,10 @@ class SectionsData {
                                     let name = JSON["repos"]!![index]["name"]! as! String
                                     let description = JSON["repos"]!![index]["description"]! as! String
                                     let date = JSON["repos"]!![index]["pushed_at"]! as! String
+                                    let url = JSON["repos"]!![index]["html_url"]! as! String
+                                    let by = JSON["repos"]!![index]["owner"]!!["login"]! as! String
                                     
-                                    openReposItems.append(Item(name: name, description: description, date: date, by: "By by by by", rsvp: "2"))
+                                    openReposItems.append(Item(name: name, description: description, date: date, type: "repos", url: url, by: by, rsvp: "2"))
                                 }
                                 
                                 let openRepos = Section(title: "Open Repositories", items: openReposItems)

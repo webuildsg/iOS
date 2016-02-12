@@ -12,6 +12,8 @@ struct Item {
     var name: String // Event / Repository name
     var description: String // Description
     var date: String // Event date / Repository pushed date
+    var type: String // "events" or "repos"
+    var url: String
     var by: String // Event group / Repository owner
     var rsvp: String  
 }

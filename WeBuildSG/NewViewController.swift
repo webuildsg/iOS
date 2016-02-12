@@ -2,17 +2,18 @@ import UIKit
 
 class NewViewController: UIViewController {
     
+    var titleString: String!
+    var dateString: String!
+    var descriptionString: String!
+    var urlString: String!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBAction func openUrl(sender: UIButton) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.google.com")!)
+    @IBAction func openUrl(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: self.urlString)!)
     }
-    
-    var titleString: String!
-    var dateString: String!
-    var descriptionString: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()

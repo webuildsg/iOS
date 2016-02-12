@@ -138,7 +138,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="openUrl:" destination="CPu-vR-VX4" eventType="touchUpInside" id="ujc-Zs-h7n"/>
+                                    <action selector="openUrl:" destination="CPu-vR-VX4" eventType="touchUpInside" id="mew-sE-EKh"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgK-tR-z1i">
