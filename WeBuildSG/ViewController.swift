@@ -35,6 +35,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return sections[section].objects.count
     }
     
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        self.tableView.backgroundColor = UIColor.whiteColor()
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Futura", size: 30)!
+        header.textLabel?.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
+        header.textLabel?.textAlignment = NSTextAlignment.Center
+    }
+    
     // Table view
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? TableViewCell
@@ -43,6 +52,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell!.datetimeLabel!.text = "on " + sections[indexPath.section].objects[indexPath.row].date
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 120
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
