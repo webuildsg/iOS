@@ -32,7 +32,7 @@ class SectionsData {
                         openEventsItems.append(Item(name: eventName, description: description, date: date, type: "events", url: url, by: by, rsvp: "2"))
                     }
                     
-                    let openEvents = Section(title: "Open Events", items: openEventsItems)
+                    let openEvents = Section(title: "Open Events 👫👬👭", items: openEventsItems)
                     sectionsArray.append(openEvents)
                     
                     Alamofire.request(.GET, devReposUrl)
@@ -55,7 +55,7 @@ class SectionsData {
                                     openReposItems.append(Item(name: name, description: description, date: date, type: "repos", url: url, by: by, rsvp: "2"))
                                 }
                                 
-                                let openRepos = Section(title: "Open Repos", items: openReposItems)
+                                let openRepos = Section(title: "Open Repos 🚀 🖥 🤖", items: openReposItems)
                                 sectionsArray.append(openRepos)
                                 
                                 return callback(sections: sectionsArray)
