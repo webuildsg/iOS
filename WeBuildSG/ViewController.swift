@@ -22,10 +22,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         getData()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        getData()
-    }
-    
     func getData() {
         SectionsData().getSectionsFromData({
             sections in
@@ -129,6 +125,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             navigationItem.backBarButtonItem = backItem
         }
     }
-    
 }
 

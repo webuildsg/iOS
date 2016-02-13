@@ -4,9 +4,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var vc: ViewController?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        if let viewControllers = self.window?.rootViewController?.childViewControllers {
+            for viewController in viewControllers {
+                if viewController.isKindOfClass(ViewController) {
+                    vc = viewController as? ViewController
+                }
+            }
+        }
+        
         return true
     }
 
@@ -19,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
-
+        vc?.getData()
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
