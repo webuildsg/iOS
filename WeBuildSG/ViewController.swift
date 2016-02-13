@@ -8,6 +8,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let control = UIRefreshControl()
+        control.addTarget(self, action: "getData:", forControlEvents: .ValueChanged)
+        self.tableView.addSubview(control)
+        
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -19,6 +24,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             self.sections = sections
             self.tableView.reloadData()
+        })
+    }
+    
+    func getData(refreshControl: UIRefreshControl) {
+        SectionsData().getSectionsFromData({
+            sections in
+            
+            self.sections = sections
+            self.tableView.reloadData()
+            refreshControl.endRefreshing()
         })
     }
     
