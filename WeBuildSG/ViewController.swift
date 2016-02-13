@@ -10,7 +10,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         let control = UIRefreshControl()
-        control.addTarget(self, action: "getData:", forControlEvents: .ValueChanged)
+        control.addTarget(self, action: "refreshData:", forControlEvents: .ValueChanged)
         self.tableView.addSubview(control)
         
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
@@ -19,6 +19,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 193/255.0, green: 26/255.0, blue: 24/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
+        getData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        getData()
+    }
+    
+    func getData() {
         SectionsData().getSectionsFromData({
             sections in
             
@@ -27,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         })
     }
     
-    func getData(refreshControl: UIRefreshControl) {
+    func refreshData(refreshControl: UIRefreshControl) {
         SectionsData().getSectionsFromData({
             sections in
             
