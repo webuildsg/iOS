@@ -1,4 +1,4 @@
-[](images/screenshot.jpg)
+![](images/screenshot.jpg)
 
 # iOS
 
