@@ -6,9 +6,13 @@
 
 ## Quick start
 
-1. Clone with `git clone git@github.com:webuildsg/iOS.git`
+1. Clone with `git clone git@github.com:webuildsg/iOS.git` or **Download the ZIP**
 - Double click `WeBuildSG.xcworkspace` and open the project in the latest version of Xcode
+
+  ![](images/workspace.png)
 - Connect your iPhone / iPad and run in the device
+
+  ![](images/run.png)
 
 ## Credits
 
