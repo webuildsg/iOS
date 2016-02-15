@@ -2,7 +2,7 @@
 
 # iOS
 
-> iOS client for iPhone and iPhone to display the data from [We Build SG](https://webuild.sg/). Coming to App Store soon!
+> iOS client for iPhone and iPhone to display the data from [We Build SG](https://webuild.sg/). Coming to App Store [soon](https://github.com/webuildsg/iOS/issues/5)!
 
 ## Quick start
 
