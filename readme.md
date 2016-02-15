@@ -6,6 +6,8 @@
 
 ## Quick start
 
+*Note: You do not need to have the Apple develop program to run your device. Just connect your iPhone / iPad* :cool:
+
 1. Clone with `git clone git@github.com:webuildsg/iOS.git` or **Download the ZIP**
 - `cd` to the directory `iOS` and install the dependancies with [RubyGem](https://rubygems.org/)
 
