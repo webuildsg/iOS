@@ -8,7 +8,7 @@
 
 *Note: You do not need to have the Apple developer program to run in your device. Just connect your iPhone / iPad* :cool:
 
-1. Clone with `git clone git@github.com:webuildsg/iOS.git` or **Download the ZIP**
+1. Clone with `git clone git@github.com:webuildsg/iOS.git` or [Download ZIP](https://github.com/webuildsg/iOS/archive/master.zip)
 - `cd` to the directory `iOS` and install the dependancies with [RubyGem](https://rubygems.org/)
 
   ```shell
