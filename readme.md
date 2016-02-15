@@ -7,6 +7,12 @@
 ## Quick start
 
 1. Clone with `git clone git@github.com:webuildsg/iOS.git` or **Download the ZIP**
+- `cd` to the directory `iOS` and install the dependancies with [RubyGem](https://rubygems.org/)
+
+  ```shell
+  sudo gem install cocoapods
+  pod install
+  ```
 - Double click `WeBuildSG.xcworkspace` and open the project in the latest version of Xcode
 
   ![](images/workspace.png)
