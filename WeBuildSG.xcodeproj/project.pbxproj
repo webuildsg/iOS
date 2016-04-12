@@ -14,7 +14,7 @@
 		ABB7CB071C6338DE00352827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB7CB061C6338DE00352827 /* Assets.xcassets */; };
 		ABB7CB0A1C6338DE00352827 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7CB081C6338DE00352827 /* LaunchScreen.storyboard */; };
 		ABB7CB151C6338DE00352827 /* WeBuildSGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB141C6338DE00352827 /* WeBuildSGTests.swift */; };
-		ABB7CB201C633B3F00352827 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB1F1C633B3F00352827 /* NewViewController.swift */; };
+		ABB7CB201C633B3F00352827 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB1F1C633B3F00352827 /* DetailViewController.swift */; };
 		ABB7CB221C633B7400352827 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB211C633B7400352827 /* TableViewCell.swift */; };
 		ABC94ED21C63502F00D92EBE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC94ED01C63502F00D92EBE /* Section.swift */; };
 		ABC94ED31C63502F00D92EBE /* SectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC94ED11C63502F00D92EBE /* SectionsData.swift */; };
@@ -42,7 +42,7 @@
 		ABB7CB101C6338DE00352827 /* WeBuildSGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeBuildSGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB7CB141C6338DE00352827 /* WeBuildSGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeBuildSGTests.swift; sourceTree = "<group>"; };
 		ABB7CB161C6338DE00352827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABB7CB1F1C633B3F00352827 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		ABB7CB1F1C633B3F00352827 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		ABB7CB211C633B7400352827 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		ABC94ED01C63502F00D92EBE /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		ABC94ED11C63502F00D92EBE /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				ABB7CB011C6338DE00352827 /* ViewController.swift */,
 				ABC94ED01C63502F00D92EBE /* Section.swift */,
 				ABC94ED11C63502F00D92EBE /* SectionsData.swift */,
-				ABB7CB1F1C633B3F00352827 /* NewViewController.swift */,
+				ABB7CB1F1C633B3F00352827 /* DetailViewController.swift */,
 				ABB7CB211C633B7400352827 /* TableViewCell.swift */,
 				ABB7CB031C6338DE00352827 /* Main.storyboard */,
 				ABB7CB061C6338DE00352827 /* Assets.xcassets */,
@@ -287,7 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC94ED21C63502F00D92EBE /* Section.swift in Sources */,
-				ABB7CB201C633B3F00352827 /* NewViewController.swift in Sources */,
+				ABB7CB201C633B3F00352827 /* DetailViewController.swift in Sources */,
 				ABB7CB221C633B7400352827 /* TableViewCell.swift in Sources */,
 				ABB7CB021C6338DE00352827 /* ViewController.swift in Sources */,
 				ABB7CB001C6338DE00352827 /* AppDelegate.swift in Sources */,

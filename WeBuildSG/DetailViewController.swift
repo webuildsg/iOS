@@ -1,6 +1,6 @@
 import UIKit
 
-class NewViewController: UIViewController {
+class DetailViewController: UIViewController {
     
     var titleString: String!
     var dateString: String!

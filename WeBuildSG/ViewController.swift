@@ -101,7 +101,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Detail view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showView") {
-            let upcoming: NewViewController = segue.destinationViewController as! NewViewController
+            let upcoming: DetailViewController = segue.destinationViewController as! DetailViewController
             
             let indexPath = self.tableView.indexPathForSelectedRow!
             let titleString = sections[indexPath.section].objects[indexPath.row].name

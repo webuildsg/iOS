@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="1146" y="402"/>
         </scene>
-        <!--New View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="UyN-Uq-DWV">
             <objects>
-                <viewController id="CPu-vR-VX4" customClass="NewViewController" customModule="WeBuildSG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CPu-vR-VX4" customClass="DetailViewController" customModule="WeBuildSG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cjY-su-p3N"/>
                         <viewControllerLayoutGuide type="bottom" id="YwD-Gw-RO4"/>
