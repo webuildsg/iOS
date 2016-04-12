@@ -10,7 +10,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         let control = UIRefreshControl()
-        control.addTarget(self, action: "refreshData:", forControlEvents: .ValueChanged)
+        control.addTarget(self, action: #selector(ViewController.refreshData(_:)), forControlEvents: .ValueChanged)
         self.tableView.addSubview(control)
         
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
