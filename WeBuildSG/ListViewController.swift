@@ -103,8 +103,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if(segue.identifier == "showDetail") {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let titleString = sections[indexPath.section].objects[indexPath.row].name
+            let backItem = UIBarButtonItem()
             
             print(titleString)
+            
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
     }
     

@@ -22,27 +22,30 @@ class DetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 193/255.0, green: 26/255.0, blue: 24/255.0, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+                
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        if (self.typeString == "events") {
-            openUrlButton.setTitle("Register for event", forState: .Normal)
-            self.dateLabel.text = "on " + self.dateString
-        } else {
-            openUrlButton.setTitle("View code", forState: .Normal)
-            self.dateLabel.text = "updated " + self.dateString
-        }
-        
-        self.titleLabel.text = self.titleString
-        self.titleLabel.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
-        
-        self.descriptionLabel.text = self.descriptionString
-        self.byLabel.text = "by " + self.byString
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//        if (self.typeString == "events") {
+//            openUrlButton.setTitle("Register for event", forState: .Normal)
+//            self.dateLabel.text = "on " + self.dateString
+//        } else {
+//            openUrlButton.setTitle("View code", forState: .Normal)
+//            self.dateLabel.text = "updated " + self.dateString
+//        }
+//        
+//        self.titleLabel.text = self.titleString
+//        self.titleLabel.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
+//        
+//        self.descriptionLabel.text = self.descriptionString
+//        self.byLabel.text = "by " + self.byString
+//        
+//        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {

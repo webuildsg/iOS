@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1167" y="390"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detail Table View Controller-->
         <scene sceneID="0XT-8I-D0s">
             <objects>
-                <tableViewController id="kee-LX-u17" sceneMemberID="viewController">
+                <tableViewController id="kee-LX-u17" customClass="DetailTableViewController" customModule="WeBuildSG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FNO-46-vSQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
