@@ -9,7 +9,7 @@
         <!--We Build SG-->
         <scene sceneID="KcR-Jw-bR7">
             <objects>
-                <viewController id="9Aj-7u-xz4" customClass="ViewController" customModule="WeBuildSG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Aj-7u-xz4" customClass="ListViewController" customModule="WeBuildSG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y83-Ka-5Cf"/>
                         <viewControllerLayoutGuide type="bottom" id="gTu-aG-cVo"/>

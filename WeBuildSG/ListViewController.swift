@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -10,7 +10,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         let control = UIRefreshControl()
-        control.addTarget(self, action: #selector(ViewController.refreshData(_:)), forControlEvents: .ValueChanged)
+        control.addTarget(self, action: #selector(ListViewController.refreshData(_:)), forControlEvents: .ValueChanged)
         self.tableView.addSubview(control)
         
         self.tableView.estimatedRowHeight = self.tableView.rowHeight

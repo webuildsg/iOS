@@ -4,13 +4,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var vc: ViewController?
+    var vc: ListViewController?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         if let viewControllers = self.window?.rootViewController?.childViewControllers {
             for viewController in viewControllers {
-                if viewController.isKindOfClass(ViewController) {
-                    vc = viewController as? ViewController
+                if viewController.isKindOfClass(ListViewController) {
+                    vc = (viewController as? ListViewController)!
                 }
             }
         }
