@@ -39,7 +39,8 @@ class DetailTableViewController: UITableViewController {
 //            self.dateLabel.text = "updated " + self.dateString
 //        }
 //        
-//        self.titleLabel.text = self.titleString
+        self.titleLabel.text = self.titleString
+      
 //        self.titleLabel.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
 //        
 //        self.descriptionLabel.text = self.descriptionString

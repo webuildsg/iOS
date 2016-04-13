@@ -100,12 +100,17 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "showDetail") {
+        if segue.identifier == "showDetail" {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let titleString = sections[indexPath.section].objects[indexPath.row].name
             let backItem = UIBarButtonItem()
             
+            let upcoming = segue.destinationViewController as! DetailTableViewController
+            
+            upcoming.titleString = titleString
+            
             print(titleString)
+            print(upcoming)
             
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
