@@ -11,7 +11,9 @@ class DetailTableViewController: UITableViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var descriptionLabel: UILabel!
+    
     @IBOutlet weak var byLabel: UILabel!
     @IBOutlet weak var openUrlButton: UIButton!
     
@@ -40,10 +42,12 @@ class DetailTableViewController: UITableViewController {
 //        }
 //        
         self.titleLabel.text = self.titleString
+        self.dateLabel.text = self.dateString
+        self.descriptionLabel.text = self.descriptionString
       
 //        self.titleLabel.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
 //        
-//        self.descriptionLabel.text = self.descriptionString
+        
 //        self.byLabel.text = "by " + self.byString
 //        
 //        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
