@@ -6,16 +6,15 @@ class DetailTableViewController: UITableViewController {
     var dateString: String!
     var descriptionString: String!
     var urlString: String!
+    var openUrlString: String!
     var typeString: String!
     var byString: String!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    @IBOutlet weak var byLabel: UILabel!
     @IBOutlet weak var openUrlButton: UIButton!
+//    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var byLabel: UILabel!
     
     @IBAction func openUrl(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: self.urlString)!)
@@ -23,34 +22,23 @@ class DetailTableViewController: UITableViewController {
        
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        self.tableView.estimatedRowHeight = 80
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+//        self.tableView.setNeedsLayout()
+//        self.tableView.layoutIfNeeded()
+        
+        tableView.separatorStyle = .None
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 193/255.0, green: 26/255.0, blue: 24/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-                
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-//        if (self.typeString == "events") {
-//            openUrlButton.setTitle("Register for event", forState: .Normal)
-//            self.dateLabel.text = "on " + self.dateString
-//        } else {
-//            openUrlButton.setTitle("View code", forState: .Normal)
-//            self.dateLabel.text = "updated " + self.dateString
-//        }
-//        
         self.titleLabel.text = self.titleString
+//        self.descriptionLabel.text = self.descriptionString
+        self.byLabel.text = self.byString
         self.dateLabel.text = self.dateString
-        self.descriptionLabel.text = self.descriptionString
+//        openUrlButton.setTitle(self.openUrlString, forState: .Normal)
       
-//        self.titleLabel.textColor = UIColor(red: 34/255.0, green: 141/255.0, blue: 183/255.0, alpha: 1.0)
-//        
-        
-//        self.byLabel.text = "by " + self.byString
-//        
-//        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +57,11 @@ class DetailTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
+    
+//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        print(indexPath)
+//        return UITableViewAutomaticDimension
+//    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

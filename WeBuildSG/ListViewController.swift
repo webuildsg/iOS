@@ -106,11 +106,18 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let upcoming = segue.destinationViewController as! DetailTableViewController
             
             upcoming.titleString = sections[indexPath.section].objects[indexPath.row].name
-            upcoming.dateString = sections[indexPath.section].objects[indexPath.row].date
+            upcoming.typeString = sections[indexPath.section].objects[indexPath.row].type
             upcoming.descriptionString = sections[indexPath.section].objects[indexPath.row].description
             upcoming.urlString = sections[indexPath.section].objects[indexPath.row].url
-            upcoming.typeString = sections[indexPath.section].objects[indexPath.row].type
-            upcoming.byString = sections[indexPath.section].objects[indexPath.row].by
+            upcoming.byString = "by " + sections[indexPath.section].objects[indexPath.row].by
+            
+            if (upcoming.typeString == "events") {
+                upcoming.dateString = "on " + sections[indexPath.section].objects[indexPath.row].date
+                upcoming.openUrlString = "RSVP event"
+            } else {
+                upcoming.dateString = "updated " + sections[indexPath.section].objects[indexPath.row].date
+                upcoming.openUrlString = "View code"
+            }
             
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
