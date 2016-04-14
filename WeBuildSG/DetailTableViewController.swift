@@ -13,6 +13,11 @@ class DetailTableViewController: UITableViewController {
     var latitudeValue: Double!
     var longitudeValue: Double!
     var locationString: String?
+  
+    private static let estimatedHeight: CGFloat = 80.0
+    private static let numberOfRows = 4
+    private static let numberOfSections = 1
+
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -29,9 +34,6 @@ class DetailTableViewController: UITableViewController {
         
         super.viewDidLoad()
         
-                
-        self.tableView.estimatedRowHeight = 80
-        self.tableView.rowHeight = UITableViewAutomaticDimension
 //        self.tableView.setNeedsLayout()
 //        self.tableView.layoutIfNeeded()
         
@@ -74,11 +76,19 @@ class DetailTableViewController: UITableViewController {
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return DetailTableViewController.numberOfSections
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return DetailTableViewController.numberOfRows
+    }
+  
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return DetailTableViewController.estimatedHeight
+    }
+  
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+      return UITableViewAutomaticDimension
     }
     
 //    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
