@@ -155,19 +155,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgy-Bw-2kI">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hb-Xy-5bW">
                                                     <rect key="frame" x="8" y="8" width="584" height="56.5"/>
                                                     <color key="backgroundColor" red="0.97254901959999995" green="0.95686274510000002" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.87843137250000003" green="0.3803921569" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="0.87843137250000003" green="0.3803921569" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="openUrl:" destination="kee-LX-u17" eventType="touchUpInside" id="lfV-OW-grq"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Cgy-Bw-2kI" secondAttribute="bottom" id="7Vk-VP-KzL"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="Cgy-Bw-2kI" secondAttribute="leading" id="IXX-n0-uJz"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Cgy-Bw-2kI" secondAttribute="trailing" id="MMn-JM-Wz0"/>
-                                                <constraint firstAttribute="topMargin" secondItem="Cgy-Bw-2kI" secondAttribute="top" id="aLH-Lf-Ae1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7hb-Xy-5bW" secondAttribute="bottom" id="2MP-wk-nFs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7hb-Xy-5bW" secondAttribute="trailing" id="PeK-vj-pbk"/>
+                                                <constraint firstAttribute="topMargin" secondItem="7hb-Xy-5bW" secondAttribute="top" id="VLh-S9-uLP"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="7hb-Xy-5bW" secondAttribute="leading" id="eii-Ok-nkm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -212,7 +216,7 @@
                     <connections>
                         <outlet property="byLabel" destination="hPM-UZ-YZR" id="QUF-v9-Z8H"/>
                         <outlet property="dateLabel" destination="ue7-5e-OlU" id="dxE-Zw-jYF"/>
-                        <outlet property="openUrlButton" destination="Cgy-Bw-2kI" id="MVH-FJ-UYe"/>
+                        <outlet property="openUrlButton" destination="7hb-Xy-5bW" id="8oD-Vb-1sR"/>
                         <outlet property="titleLabel" destination="q1B-gm-Kwy" id="Tp5-oU-xGZ"/>
                     </connections>
                 </tableViewController>

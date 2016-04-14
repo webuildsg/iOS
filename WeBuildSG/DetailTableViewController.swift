@@ -13,6 +13,7 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var openUrlButton: UIButton!
+    
 //    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
     
@@ -22,6 +23,7 @@ class DetailTableViewController: UITableViewController {
        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
                 
         self.tableView.estimatedRowHeight = 80
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -37,7 +39,7 @@ class DetailTableViewController: UITableViewController {
 //        self.descriptionLabel.text = self.descriptionString
         self.byLabel.text = self.byString
         self.dateLabel.text = self.dateString
-//        openUrlButton.setTitle(self.openUrlString, forState: .Normal)
+        openUrlButton.setTitle(self.openUrlString, forState: .Normal)
       
     }
 
