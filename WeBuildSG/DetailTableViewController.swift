@@ -59,6 +59,8 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
         
         mapView.addAnnotation(note)
         mapView.addAnnotation(pin)
+        mapView.selectAnnotation(pin, animated: true)
+        
         centerMapOnLocation(initialLocation)
         
     }
