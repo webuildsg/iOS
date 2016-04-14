@@ -175,34 +175,66 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0Ho-2v-Edp">
-                                        <rect key="frame" x="0.0" y="206" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="182" id="0Ho-2v-Edp">
+                                        <rect key="frame" x="0.0" y="206" width="600" height="182"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ho-2v-Edp" id="9eB-im-1cw">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="181.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-UZ-YZR">
-                                                    <rect key="frame" x="8" y="11" width="584" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.1333333333" green="0.51372549020000002" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-87-4gR">
+                                                    <rect key="frame" x="8" y="25" width="584" height="148.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hPM-UZ-YZR" secondAttribute="trailing" id="0wr-9w-nPC"/>
+                                                <constraint firstItem="0vm-87-4gR" firstAttribute="top" secondItem="hPM-UZ-YZR" secondAttribute="bottom" constant="8" id="1oN-gc-SWb"/>
+                                                <constraint firstItem="0vm-87-4gR" firstAttribute="top" secondItem="hPM-UZ-YZR" secondAttribute="bottom" id="8ZS-Tb-rlE"/>
+                                                <constraint firstItem="hPM-UZ-YZR" firstAttribute="top" secondItem="9eB-im-1cw" secondAttribute="topMargin" id="Aik-jL-ZTW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0vm-87-4gR" secondAttribute="bottom" id="Dgq-OK-LJo"/>
                                                 <constraint firstItem="hPM-UZ-YZR" firstAttribute="top" secondItem="9eB-im-1cw" secondAttribute="topMargin" constant="3" id="Zcm-i3-Zny"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="hPM-UZ-YZR" secondAttribute="trailing" id="eCw-97-Jau"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="0vm-87-4gR" secondAttribute="leading" id="fwc-Gh-FbC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hPM-UZ-YZR" secondAttribute="bottom" constant="3.5" id="giz-Zf-nak"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="hPM-UZ-YZR" secondAttribute="leading" id="rgX-J4-6Va"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0vm-87-4gR" secondAttribute="trailing" id="xL3-rq-Nxa"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Zcm-i3-Zny"/>
+                                                    <exclude reference="eCw-97-Jau"/>
+                                                    <exclude reference="giz-Zf-nak"/>
+                                                    <exclude reference="1oN-gc-SWb"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="195" id="L2K-NC-3S9">
-                                        <rect key="frame" x="0.0" y="250" width="600" height="195"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="178" id="JiK-OV-EZ6">
+                                        <rect key="frame" x="0.0" y="388" width="600" height="178"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L2K-NC-3S9" id="oHa-d1-aDr">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="194.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JiK-OV-EZ6" id="gB1-0B-yqD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="177.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yIt-ld-r6B">
+                                                    <rect key="frame" x="8" y="8" width="584" height="161.5"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="yIt-ld-r6B" secondAttribute="leading" id="0rl-KM-3vU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yIt-ld-r6B" secondAttribute="trailing" id="AKv-ms-9wo"/>
+                                                <constraint firstAttribute="topMargin" secondItem="yIt-ld-r6B" secondAttribute="top" id="jZf-UQ-jOU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yIt-ld-r6B" secondAttribute="bottom" id="xgL-cN-gYU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -216,6 +248,8 @@
                     <connections>
                         <outlet property="byLabel" destination="hPM-UZ-YZR" id="QUF-v9-Z8H"/>
                         <outlet property="dateLabel" destination="ue7-5e-OlU" id="dxE-Zw-jYF"/>
+                        <outlet property="descriptionLabel" destination="0vm-87-4gR" id="1jI-2n-XPH"/>
+                        <outlet property="mapView" destination="yIt-ld-r6B" id="OFB-CL-hTF"/>
                         <outlet property="openUrlButton" destination="7hb-Xy-5bW" id="8oD-Vb-1sR"/>
                         <outlet property="titleLabel" destination="q1B-gm-Kwy" id="Tp5-oU-xGZ"/>
                     </connections>

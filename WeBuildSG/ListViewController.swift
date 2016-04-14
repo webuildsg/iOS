@@ -124,32 +124,5 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    // Detail view
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if (segue.identifier == "showView") {
-//            let upcoming: DetailTableViewController = segue.destinationViewController
-//            
-//            let indexPath = self.tableView.indexPathForSelectedRow!
-//            let titleString = sections[indexPath.section].objects[indexPath.row].name
-//            let dateString = sections[indexPath.section].objects[indexPath.row].date
-//            let descriptionString = sections[indexPath.section].objects[indexPath.row].description
-//            let urlString = sections[indexPath.section].objects[indexPath.row].url
-//            let typeString = sections[indexPath.section].objects[indexPath.row].type
-//            let byString = sections[indexPath.section].objects[indexPath.row].by
-//            
-//            upcoming.titleString = titleString
-//            upcoming.dateString = dateString
-//            upcoming.descriptionString = descriptionString
-//            upcoming.urlString = urlString
-//            upcoming.typeString = typeString
-//            upcoming.byString = byString
-//            
-//            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//            
-//            let backItem = UIBarButtonItem()
-//            backItem.title = "Back"
-//            navigationItem.backBarButtonItem = backItem
-//        }
-//    }
 }
 

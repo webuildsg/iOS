@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 
 class DetailTableViewController: UITableViewController {
 
@@ -13,15 +14,16 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var openUrlButton: UIButton!
-    
-//    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func openUrl(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: self.urlString)!)
     }
        
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
                 
@@ -36,28 +38,33 @@ class DetailTableViewController: UITableViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         self.titleLabel.text = self.titleString
-//        self.descriptionLabel.text = self.descriptionString
+        self.descriptionLabel.text = self.descriptionString
         self.byLabel.text = self.byString
         self.dateLabel.text = self.dateString
         openUrlButton.setTitle(self.openUrlString, forState: .Normal)
+        
+        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        centerMapOnLocation(initialLocation)
       
+    }
+    
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 4
     }
     
 //    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
