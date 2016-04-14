@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class DetailTableViewController: UITableViewController {
+class DetailTableViewController: UITableViewController, MKMapViewDelegate {
 
     var titleString: String!
     var dateString: String!
@@ -33,6 +33,7 @@ class DetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        mapView.delegate = self
         
         tableView.separatorStyle = .None
         
@@ -48,6 +49,7 @@ class DetailTableViewController: UITableViewController {
         
         let initialLocation = CLLocation(latitude: self.latitudeValue, longitude: self.longitudeValue)
         let pin = Annotation(
+            title: self.locationString!,
             location: self.locationString!,
             coordinate: CLLocationCoordinate2D(latitude: self.latitudeValue, longitude: self.longitudeValue))
         let note = MKPointAnnotation()
@@ -90,6 +92,26 @@ class DetailTableViewController: UITableViewController {
         } else {
             return UITableViewAutomaticDimension
         }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? Annotation {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+                as? MKPinAnnotationView { // 2
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+//              view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as UIView
+            }
+            return view
+        }
+        return nil
     }
     
 }
