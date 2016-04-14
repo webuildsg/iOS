@@ -1,11 +1,3 @@
-//
-//  SectionsData.swift
-//  Sections
-//
-//  Created by Sayanee Basu on 4/2/16.
-//  Copyright © 2016 Sayanee Basu. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 

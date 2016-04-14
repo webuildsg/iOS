@@ -84,7 +84,12 @@ class DetailTableViewController: UITableViewController {
     }
   
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-      return UITableViewAutomaticDimension
+
+        if (self.typeString == "repos" && indexPath.row == 2) {
+            return 0 // hide map section for repositories
+        } else {
+            return UITableViewAutomaticDimension
+        }
     }
     
 }
