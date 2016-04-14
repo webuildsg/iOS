@@ -48,13 +48,18 @@ class DetailTableViewController: UITableViewController {
         openUrlButton.setTitle(self.openUrlString, forState: .Normal)
         
         let initialLocation = CLLocation(latitude: self.latitudeValue, longitude: self.longitudeValue)
-        let note = Annotation(
+        let pin = Annotation(
             location: self.locationString!,
             coordinate: CLLocationCoordinate2D(latitude: self.latitudeValue, longitude: self.longitudeValue))
+        let note = MKPointAnnotation()
         
-        centerMapOnLocation(initialLocation)
+        note.coordinate = CLLocationCoordinate2D(latitude: self.latitudeValue, longitude: self.longitudeValue)
+        note.subtitle = self.locationString!
+        
         mapView.addAnnotation(note)
-            
+        mapView.addAnnotation(pin)
+        centerMapOnLocation(initialLocation)
+        
     }
     
     let regionRadius: CLLocationDistance = 1000
