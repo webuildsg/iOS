@@ -10,6 +10,8 @@ class DetailTableViewController: UITableViewController {
     var openUrlString: String!
     var typeString: String!
     var byString: String!
+    var latitudeValue: Double!
+    var longitudeValue: Double!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -43,7 +45,7 @@ class DetailTableViewController: UITableViewController {
         self.dateLabel.text = self.dateString
         openUrlButton.setTitle(self.openUrlString, forState: .Normal)
         
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        let initialLocation = CLLocation(latitude: self.latitudeValue, longitude: longitudeValue)
         centerMapOnLocation(initialLocation)
       
     }

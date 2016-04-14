@@ -28,8 +28,23 @@ class SectionsData {
                         let date = JSON["events"]!![index]["formatted_time"]! as! String
                         let url = JSON["events"]!![index]["url"]! as! String
                         let by = JSON["events"]!![index]["group_name"]! as! String
+                        let rsvp = JSON["events"]!![index]["rsvp_count"]! as! Int
+                        let latitude = JSON["events"]!![index]["latitude"]! as? Double ?? 1.3521
+                        let longitude = JSON["events"]!![index]["longitude"]! as? Double ?? 103.8198
+                        let location = JSON["events"]!![index]["location"]! as! String
                         
-                        openEventsItems.append(Item(name: eventName, description: description, date: date, type: "events", url: url, by: by, rsvp: "2"))
+                        openEventsItems.append(Item(
+                            name: eventName,
+                            description: description,
+                            date: date,
+                            type: "events",
+                            url: url,
+                            by: by,
+                            rsvp: rsvp,
+                            latitude: latitude,
+                            longitude: longitude,
+                            location: location
+                        ))
                     }
                     
                     let openEvents = Section(title: "Open Events 👫👬👭", items: openEventsItems)
@@ -47,10 +62,10 @@ class SectionsData {
                                     let url = JSON["repos"]!![index]["html_url"]! as! String
                                     
                                     let owner = JSON["repos"]!![index]["owner"]!!["login"]! as! String
-                                    let stars = JSON["repos"]!![index]["stargazers_count"]!
+                                    let stars = JSON["repos"]!![index]["stargazers_count"]! as! Int
                                     let language = JSON["repos"]!![index]["language"]! as! String
                                     
-                                    let by = "\(owner) | \(stars!)" + " ⭐️ | " + language
+                                    let by = "\(owner) | \(stars)" + " ⭐️ | " + language
                                     
                                     openReposItems.append(Item(
                                         name: name,
@@ -59,7 +74,10 @@ class SectionsData {
                                         type: "repos",
                                         url: url,
                                         by: by,
-                                        rsvp: "2"))
+                                        rsvp: stars,
+                                        latitude: nil,
+                                        longitude: nil,
+                                        location: "Singapore"))
                                 }
                                 
                                 let openRepos = Section(title: "Open Repos 🚀 🌳 🤖", items: openReposItems)
