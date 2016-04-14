@@ -12,6 +12,7 @@ class DetailTableViewController: UITableViewController {
     var byString: String!
     var latitudeValue: Double!
     var longitudeValue: Double!
+    var locationString: String?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -43,11 +44,17 @@ class DetailTableViewController: UITableViewController {
         self.descriptionLabel.text = self.descriptionString
         self.byLabel.text = self.byString
         self.dateLabel.text = self.dateString
+        
         openUrlButton.setTitle(self.openUrlString, forState: .Normal)
         
-        let initialLocation = CLLocation(latitude: self.latitudeValue, longitude: longitudeValue)
+        let initialLocation = CLLocation(latitude: self.latitudeValue, longitude: self.longitudeValue)
+        let note = Annotation(
+            location: self.locationString!,
+            coordinate: CLLocationCoordinate2D(latitude: self.latitudeValue, longitude: self.longitudeValue))
+        
         centerMapOnLocation(initialLocation)
-      
+        mapView.addAnnotation(note)
+            
     }
     
     let regionRadius: CLLocationDistance = 1000

@@ -112,6 +112,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             upcoming.byString = "by " + sections[indexPath.section].objects[indexPath.row].by
             upcoming.latitudeValue = sections[indexPath.section].objects[indexPath.row].latitude
             upcoming.longitudeValue = sections[indexPath.section].objects[indexPath.row].longitude
+            upcoming.locationString = sections[indexPath.section].objects[indexPath.row].location
             
             if (upcoming.typeString == "events") {
                 upcoming.dateString = "on " + sections[indexPath.section].objects[indexPath.row].date

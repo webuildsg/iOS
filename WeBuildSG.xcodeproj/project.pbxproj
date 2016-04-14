@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		57E8250E2F3D6A0478ED07F7 /* Pods_WeBuildSG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC546EAB54A7AD1C2AB2DB9 /* Pods_WeBuildSG.framework */; };
 		AB210A541CBCA2DA00CDBAEC /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB210A531CBCA2DA00CDBAEC /* DetailTableViewController.swift */; };
+		AB27997E1CBF8F3600F6C9F8 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27997D1CBF8F3600F6C9F8 /* Annotation.swift */; };
 		ABB7CB001C6338DE00352827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CAFF1C6338DE00352827 /* AppDelegate.swift */; };
 		ABB7CB021C6338DE00352827 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7CB011C6338DE00352827 /* ListViewController.swift */; };
 		ABB7CB051C6338DE00352827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7CB031C6338DE00352827 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		5AC546EAB54A7AD1C2AB2DB9 /* Pods_WeBuildSG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeBuildSG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB210A531CBCA2DA00CDBAEC /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		AB27997D1CBF8F3600F6C9F8 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		ABB7CAFC1C6338DE00352827 /* WeBuildSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeBuildSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB7CAFF1C6338DE00352827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABB7CB011C6338DE00352827 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				ABB7CB081C6338DE00352827 /* LaunchScreen.storyboard */,
 				ABB7CB0B1C6338DE00352827 /* Info.plist */,
 				AB210A531CBCA2DA00CDBAEC /* DetailTableViewController.swift */,
+				AB27997D1CBF8F3600F6C9F8 /* Annotation.swift */,
 			);
 			path = WeBuildSG;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				ABB7CB221C633B7400352827 /* TableViewCell.swift in Sources */,
 				ABB7CB021C6338DE00352827 /* ListViewController.swift in Sources */,
 				ABB7CB001C6338DE00352827 /* AppDelegate.swift in Sources */,
+				AB27997E1CBF8F3600F6C9F8 /* Annotation.swift in Sources */,
 				ABC94ED31C63502F00D92EBE /* SectionsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
