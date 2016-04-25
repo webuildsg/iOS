@@ -91,9 +91,13 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
 
         if (self.typeString == "repos" && indexPath.row == 2) {
             return 0 // hide map section for repositories
-        } else {
-            return UITableViewAutomaticDimension
         }
+        
+        if (self.typeString == "events" && indexPath.row == 2 && self.latitudeValue == 1.3521 && self.longitudeValue == 103.8198) {
+            return 0 // hide map section for repositories
+        }
+        
+        return UITableViewAutomaticDimension
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
