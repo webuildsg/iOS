@@ -57,12 +57,9 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
         note.coordinate = CLLocationCoordinate2D(latitude: self.latitudeValue, longitude: self.longitudeValue)
         note.subtitle = self.locationString!
         
-        mapView.addAnnotation(note)
         mapView.addAnnotation(pin)
-        mapView.selectAnnotation(pin, animated: true)
         
         centerMapOnLocation(initialLocation)
-        
     }
     
     let regionRadius: CLLocationDistance = 1000
@@ -94,30 +91,10 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
         }
         
         if (self.typeString == "events" && indexPath.row == 2 && self.latitudeValue == 1.3521 && self.longitudeValue == 103.8198) {
-            return 0 // hide map section for repositories
+            return 0 // hide map section for events that does not have lat,long from the API info
         }
         
         return UITableViewAutomaticDimension
-    }
-    
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? Annotation {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-                as? MKPinAnnotationView { // 2
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                // 3
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-//              view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as UIView
-            }
-            return view
-        }
-        return nil
     }
     
 }
