@@ -15,7 +15,7 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     var locationString: String?
   
     private static let estimatedHeight: CGFloat = 80.0
-    private static let numberOfRows = 4
+    private static let numberOfRows = 5
     private static let numberOfSections = 1
 
     
@@ -23,6 +23,7 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var openUrlButton: UIButton!
     @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -44,6 +45,7 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
         self.descriptionLabel.text = self.descriptionString
         self.byLabel.text = self.byString
         self.dateLabel.text = self.dateString
+        self.locationLabel.text = "📍 " + self.locationString!
         
         openUrlButton.setTitle(self.openUrlString, forState: .Normal)
         
@@ -86,8 +88,10 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
   
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
-        if (self.typeString == "repos" && indexPath.row == 2) {
-            return 0 // hide map section for repositories
+        if (self.typeString == "repos") {
+            if (indexPath.row == 2 || indexPath.row == 3) {
+                return 0 // hide map section for repositories
+            }
         }
         
         if (self.typeString == "events" && indexPath.row == 2 && self.latitudeValue == 1.3521 && self.longitudeValue == 103.8198) {

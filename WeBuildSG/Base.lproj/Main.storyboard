@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqR-5k-Mpy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqR-5k-Mpy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -241,10 +241,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-87-4gR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-87-4gR">
                                                     <rect key="frame" x="8" y="8" width="584" height="43.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.1333333333" green="0.51372549020000002" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -264,6 +264,36 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="ys6-f3-f9T">
+                                        <rect key="frame" x="0.0" y="517" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ys6-f3-f9T" id="dYg-be-zLy">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaB-ns-ylf">
+                                                    <rect key="frame" x="8" y="8" width="584" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DaB-ns-ylf" secondAttribute="trailing" id="D3o-Wv-NLk"/>
+                                                <constraint firstAttribute="topMargin" secondItem="DaB-ns-ylf" secondAttribute="top" id="Qv7-Bh-8jc"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="DaB-ns-ylf" secondAttribute="leading" id="ZVe-Lv-g4c"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DaB-ns-ylf" secondAttribute="bottom" id="qJq-xq-N0R"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DaB-ns-ylf" secondAttribute="trailing" id="tsw-n8-nW8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DaB-ns-ylf" secondAttribute="bottom" id="urv-nT-Ta0"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="urv-nT-Ta0"/>
+                                                    <exclude reference="tsw-n8-nW8"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -275,7 +305,8 @@
                     <connections>
                         <outlet property="byLabel" destination="hPM-UZ-YZR" id="QUF-v9-Z8H"/>
                         <outlet property="dateLabel" destination="ue7-5e-OlU" id="dxE-Zw-jYF"/>
-                        <outlet property="descriptionLabel" destination="0vm-87-4gR" id="1jI-2n-XPH"/>
+                        <outlet property="descriptionLabel" destination="DaB-ns-ylf" id="lH1-KX-YT9"/>
+                        <outlet property="locationLabel" destination="0vm-87-4gR" id="VMm-7E-Wvh"/>
                         <outlet property="mapView" destination="yIt-ld-r6B" id="OFB-CL-hTF"/>
                         <outlet property="openUrlButton" destination="7hb-Xy-5bW" id="8oD-Vb-1sR"/>
                         <outlet property="titleLabel" destination="q1B-gm-Kwy" id="Tp5-oU-xGZ"/>
