@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import EventKit
 
 class DetailTableViewController: UITableViewController, MKMapViewDelegate {
 
@@ -17,7 +18,6 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     private static let estimatedHeight: CGFloat = 80.0
     private static let numberOfRows = 5
     private static let numberOfSections = 1
-
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -26,6 +26,10 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBAction func addToCalendarButton(sender: AnyObject) {
+        addEventToCalendar(title: "We Build SG Test event", description: "We Build SG test event description", startDate: NSDate(), endDate: NSDate())
+    }
     
     @IBAction func openUrl(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: self.urlString)!)
@@ -62,6 +66,38 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
         mapView.addAnnotation(pin)
         
         centerMapOnLocation(initialLocation)
+    }
+    
+    func addEventToCalendar(title title: String, description: String?, startDate: NSDate, endDate: NSDate, completion: ((success: Bool, error: NSError?) -> Void)? = nil) {
+        let eventStore = EKEventStore()
+        
+        eventStore.requestAccessToEntityType(.Event, completion: { (granted, error) in
+            if (granted) && (error == nil) {
+                let event = EKEvent(eventStore: eventStore)
+                
+                event.title = title
+                event.startDate = startDate
+                event.endDate = endDate
+                event.notes = description
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                
+                do {
+                    try eventStore.saveEvent(event, span: .ThisEvent)
+                } catch let e as NSError {
+                    completion?(success: false, error: e)
+                    return
+                }
+                completion?(success: true, error: nil)
+                
+                let alert = UIAlertController(title: "Success", message: "Event added to your calendar!", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alert.addAction(OKAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            } else {
+                completion?(success: false, error: error)
+            }
+        })
     }
     
     let regionRadius: CLLocationDistance = 1000

@@ -209,8 +209,59 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="FDn-vf-erg">
+                                        <rect key="frame" x="0.0" y="235" width="600" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FDn-vf-erg" id="8Ha-ih-uRw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="101.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUr-Wy-O6P">
+                                                    <rect key="frame" x="8" y="8" width="584" height="56.5"/>
+                                                    <color key="backgroundColor" red="0.97254901959999995" green="0.95686274510000002" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56.5" id="Gj0-qV-zDO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Add to calendar">
+                                                        <color key="titleColor" red="0.87843137250000003" green="0.3803921569" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addToCalendarButton:" destination="kee-LX-u17" eventType="touchUpInside" id="K2t-Av-zhP"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTK-uG-teb">
+                                                    <rect key="frame" x="8" y="76" width="584" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.1333333333" green="0.51372549020000002" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xUr-Wy-O6P" secondAttribute="trailing" id="06U-MS-Zn8"/>
+                                                <constraint firstAttribute="topMargin" secondItem="xUr-Wy-O6P" secondAttribute="top" id="8Dz-DC-K0D"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xUr-Wy-O6P" secondAttribute="bottom" id="8GQ-Zy-WQV"/>
+                                                <constraint firstItem="FTK-uG-teb" firstAttribute="top" secondItem="xUr-Wy-O6P" secondAttribute="bottom" constant="11.5" id="FS2-nj-a67"/>
+                                                <constraint firstItem="FTK-uG-teb" firstAttribute="top" secondItem="xUr-Wy-O6P" secondAttribute="bottom" constant="11.5" id="Lsm-bK-1VN"/>
+                                                <constraint firstItem="xUr-Wy-O6P" firstAttribute="width" secondItem="FTK-uG-teb" secondAttribute="width" id="RPJ-eS-bnz"/>
+                                                <constraint firstItem="xUr-Wy-O6P" firstAttribute="leading" secondItem="FTK-uG-teb" secondAttribute="leading" id="Xzu-b9-yFv"/>
+                                                <constraint firstItem="FTK-uG-teb" firstAttribute="top" secondItem="xUr-Wy-O6P" secondAttribute="bottom" constant="11.5" id="fON-DJ-xma"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="FTK-uG-teb" secondAttribute="leading" id="ghn-3h-eJC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FTK-uG-teb" secondAttribute="bottom" id="glg-2x-ZD8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FTK-uG-teb" secondAttribute="trailing" id="o8A-AA-xLc"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="xUr-Wy-O6P" secondAttribute="leading" id="s2B-If-Ak1"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="8GQ-Zy-WQV"/>
+                                                    <exclude reference="fON-DJ-xma"/>
+                                                    <exclude reference="FS2-nj-a67"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="222" id="JiK-OV-EZ6">
-                                        <rect key="frame" x="0.0" y="235" width="600" height="222"/>
+                                        <rect key="frame" x="0.0" y="337" width="600" height="222"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JiK-OV-EZ6" id="gB1-0B-yqD">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="221.5"/>
@@ -241,7 +292,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="0Ho-2v-Edp">
-                                        <rect key="frame" x="0.0" y="457" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="559" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ho-2v-Edp" id="9eB-im-1cw">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
@@ -271,7 +322,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="ys6-f3-f9T">
-                                        <rect key="frame" x="0.0" y="517" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="619" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ys6-f3-f9T" id="dYg-be-zLy">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
