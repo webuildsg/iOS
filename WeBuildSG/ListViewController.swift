@@ -3,12 +3,16 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var sections: [Section] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        loader.startAnimating()
+        loader.hidesWhenStopped = true
+        
         let control = UIRefreshControl()
         control.addTarget(self, action: #selector(ListViewController.refreshData(_:)), forControlEvents: .ValueChanged)
         self.tableView.addSubview(control)
@@ -26,6 +30,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         SectionsData().getSectionsFromData({
             sections in
             
+            self.loader.stopAnimating()
             self.sections = sections
             self.tableView.reloadData()
         })

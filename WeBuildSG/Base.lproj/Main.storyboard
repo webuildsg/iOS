@@ -79,17 +79,23 @@
                                     <outlet property="delegate" destination="9Aj-7u-xz4" id="ctV-ZK-tAA"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gZN-VR-WMQ">
+                                <rect key="frame" x="290" y="78" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gZN-VR-WMQ" firstAttribute="centerX" secondItem="KaO-G6-2iP" secondAttribute="centerX" id="61g-yz-qtK"/>
                             <constraint firstItem="KaO-G6-2iP" firstAttribute="top" secondItem="1Ym-md-TXK" secondAttribute="top" id="Ckb-2G-ynE"/>
                             <constraint firstItem="KaO-G6-2iP" firstAttribute="bottom" secondItem="gTu-aG-cVo" secondAttribute="top" id="KoB-Z1-HZX"/>
                             <constraint firstAttribute="trailing" secondItem="KaO-G6-2iP" secondAttribute="trailing" id="hrL-AJ-xbQ"/>
+                            <constraint firstItem="gZN-VR-WMQ" firstAttribute="centerY" secondItem="KaO-G6-2iP" secondAttribute="centerY" id="mCD-PV-osU"/>
                             <constraint firstItem="KaO-G6-2iP" firstAttribute="leading" secondItem="1Ym-md-TXK" secondAttribute="leading" id="scS-wX-0SD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="We Build SG" id="Xx0-fh-wRp"/>
                     <connections>
+                        <outlet property="loader" destination="gZN-VR-WMQ" id="kFt-13-ag7"/>
                         <outlet property="tableView" destination="KaO-G6-2iP" id="ODS-lw-L3k"/>
                         <segue destination="kee-LX-u17" kind="show" identifier="showDetail" id="FJP-4l-gWx"/>
                     </connections>
@@ -288,8 +294,8 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="urv-nT-Ta0"/>
                                                     <exclude reference="tsw-n8-nW8"/>
+                                                    <exclude reference="urv-nT-Ta0"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
