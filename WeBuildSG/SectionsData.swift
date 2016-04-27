@@ -2,6 +2,13 @@ import Foundation
 import Alamofire
 
 class SectionsData {
+    func getDate(date: String) -> NSDate? {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        return dateFormatter.dateFromString(date)
+    }
+    
     func getSectionsFromData(callback: (sections: [Section]) -> ()) {
         var sectionsArray = [Section]()
         let prodEventsUrl = "https://webuild.sg/api/v1/events?n=10"
@@ -24,6 +31,8 @@ class SectionsData {
                         let latitude = JSON["events"]!![index]["latitude"]! as? Double ?? 1.3521
                         let longitude = JSON["events"]!![index]["longitude"]! as? Double ?? 103.8198
                         let location = JSON["events"]!![index]["location"]! as! String
+                        let start = JSON["events"]!![index]["start_time"]! as! String
+                        let end = JSON["events"]!![index]["end_time"]! as! String
                         
                         openEventsItems.append(Item(
                             name: eventName,
@@ -35,7 +44,9 @@ class SectionsData {
                             rsvp: rsvp,
                             latitude: latitude,
                             longitude: longitude,
-                            location: location
+                            location: location,
+                            start: self.getDate(start),
+                            end: self.getDate(end)
                         ))
                     }
                     
@@ -69,7 +80,9 @@ class SectionsData {
                                         rsvp: stars,
                                         latitude: 1.3521,
                                         longitude: 103.8198,
-                                        location: "Singapore"))
+                                        location: "Singapore",
+                                        start: nil,
+                                        end: nil))
                                 }
                                 
                                 let openRepos = Section(title: "Open Repos 🚀 🌳 🤖", items: openReposItems)

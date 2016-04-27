@@ -19,6 +19,8 @@ struct Item {
     var latitude: Double?
     var longitude: Double?
     var location: String
+    var start: NSDate?
+    var end: NSDate?
 }
 
 struct Section {

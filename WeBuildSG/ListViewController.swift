@@ -122,6 +122,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if (upcoming.typeString == "events") {
                 upcoming.dateString = "on " + sections[indexPath.section].objects[indexPath.row].date
                 upcoming.openUrlString = "RSVP event"
+                upcoming.startDate = sections[indexPath.section].objects[indexPath.row].start
+                upcoming.endDate = sections[indexPath.section].objects[indexPath.row].end
             } else {
                 upcoming.dateString = "updated " + sections[indexPath.section].objects[indexPath.row].date
                 upcoming.openUrlString = "View code"

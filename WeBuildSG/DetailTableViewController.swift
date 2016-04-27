@@ -14,6 +14,8 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     var latitudeValue: Double!
     var longitudeValue: Double!
     var locationString: String?
+    var startDate: NSDate?
+    var endDate: NSDate?
   
     private static let estimatedHeight: CGFloat = 80.0
     private static let numberOfRows = 5
@@ -28,7 +30,9 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func addToCalendarButton(sender: AnyObject) {
-        addEventToCalendar(title: self.titleString, description: self.descriptionString, startDate: NSDate(), endDate: NSDate())
+        let description = "Address: " + self.locationString! + "\n\n" + self.descriptionString!
+        
+        addEventToCalendar(title: self.titleString, description: description, startDate: self.startDate!, endDate: self.endDate!)
     }
     
     @IBAction func openUrl(sender: AnyObject) {
