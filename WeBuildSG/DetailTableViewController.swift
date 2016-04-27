@@ -19,13 +19,14 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     var endDate: NSDate?
   
     private static let estimatedHeight: CGFloat = 80.0
-    private static let numberOfRows = 5
+    private static let numberOfRows = 6
     private static let numberOfSections = 1
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var openUrlButton: UIButton!
     @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var byRepoLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -38,7 +39,7 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     
     @IBAction func openUrl(sender: AnyObject) {
         let svc = SFSafariViewController(URL: NSURL(string: self.urlString)!)
-        self.presentViewController(svc, animated: true, completion: nil)        
+        self.presentViewController(svc, animated: true, completion: nil)
     }
        
     override func viewDidLoad() {
@@ -54,6 +55,7 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
         self.titleLabel.text = self.titleString
         self.descriptionLabel.text = self.descriptionString
         self.byLabel.text = self.byString
+        self.byRepoLabel.text = self.byString
         self.dateLabel.text = self.dateString
         self.locationLabel.text = "📍 " + self.locationString!
         
@@ -131,13 +133,22 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
         if (self.typeString == "repos") {
-            if (indexPath.row == 2 || indexPath.row == 3) {
-                return 0 // hide map section for repositories
+            if (indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 4) {
+                // hide buttons, address, map
+                return 0
             }
         }
         
-        if (self.typeString == "events" && indexPath.row == 2 && self.latitudeValue == 1.3521 && self.longitudeValue == 103.8198) {
-            return 0 // hide map section for events that does not have lat,long from the API info
+        if (self.typeString == "events") {
+            if (indexPath.row == 3 && self.latitudeValue == 1.3521 && self.longitudeValue == 103.8198) {
+                // hide map section for events that does not have lat,long from the API info
+                return 0
+            }
+            
+            if (indexPath.row == 2) {
+                // hide repository view code button
+                return 0
+            }
         }
         
         return UITableViewAutomaticDimension
