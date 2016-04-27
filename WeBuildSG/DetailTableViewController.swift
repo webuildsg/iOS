@@ -28,7 +28,7 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func addToCalendarButton(sender: AnyObject) {
-        addEventToCalendar(title: "We Build SG Test event", description: "We Build SG test event description", startDate: NSDate(), endDate: NSDate())
+        addEventToCalendar(title: self.titleString, description: self.descriptionString, startDate: NSDate(), endDate: NSDate())
     }
     
     @IBAction func openUrl(sender: AnyObject) {
