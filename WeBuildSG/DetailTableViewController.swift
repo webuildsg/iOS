@@ -1,6 +1,7 @@
 import UIKit
 import MapKit
 import EventKit
+import SafariServices
 
 class DetailTableViewController: UITableViewController, MKMapViewDelegate {
 
@@ -36,7 +37,8 @@ class DetailTableViewController: UITableViewController, MKMapViewDelegate {
     }
     
     @IBAction func openUrl(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: self.urlString)!)
+        let svc = SFSafariViewController(URL: NSURL(string: self.urlString)!)
+        self.presentViewController(svc, animated: true, completion: nil)        
     }
        
     override func viewDidLoad() {
