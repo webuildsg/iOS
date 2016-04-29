@@ -15,7 +15,7 @@ struct Item {
     var type: String // "events" or "repos"
     var url: String
     var by: String // Event group / Repository owner
-    var rsvp: Int
+    var rsvp: Int?
     var latitude: Double?
     var longitude: Double?
     var location: String

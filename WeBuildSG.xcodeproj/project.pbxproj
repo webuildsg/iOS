@@ -188,7 +188,7 @@
 				TargetAttributes = {
 					ABB7CAFB1C6338DE00352827 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 4RY823M899;
+						DevelopmentTeam = 29W9A4NCQJ;
 					};
 					ABB7CB0F1C6338DE00352827 = {
 						CreatedOnToolsVersion = 7.2;
@@ -430,7 +430,7 @@
 				INFOPLIST_FILE = WeBuildSG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.WeBuildSG;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crayonio.com.crayonio.webuildsgapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,7 +446,7 @@
 				INFOPLIST_FILE = WeBuildSG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.WeBuildSG;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crayonio.com.crayonio.webuildsgapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

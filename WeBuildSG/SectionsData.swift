@@ -27,7 +27,7 @@ class SectionsData {
                         let date = JSON["events"]!![index]["formatted_time"]! as! String
                         let url = JSON["events"]!![index]["url"]! as! String
                         let by = JSON["events"]!![index]["group_name"]! as! String
-                        let rsvp = JSON["events"]!![index]["rsvp_count"]! as! Int
+                        let rsvp = JSON["events"]!![index]["rsvp_count"]! as! Int?
                         let latitude = JSON["events"]!![index]["latitude"]! as? Double ?? 1.3521
                         let longitude = JSON["events"]!![index]["longitude"]! as? Double ?? 103.8198
                         let location = JSON["events"]!![index]["location"]! as! String
