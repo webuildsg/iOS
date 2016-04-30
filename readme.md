@@ -2,6 +2,8 @@
 
 > iOS client for iPhone and iPad to display the data from [We Build SG](https://webuild.sg/). Download from the [App Store](https://itunes.apple.com/us/app/we-build-sg/id1089421487?mt=8)!
 
+![](images/screenshot.jpg)
+
 ## Quick start
 
 *Note: You do not need to have the Apple developer program to run in your device. Just connect your iPhone / iPad* :cool:
