@@ -1,8 +1,6 @@
-![](images/screenshot.jpg)
-
 # iOS
 
-> iOS client for iPhone and iPad to display the data from [We Build SG](https://webuild.sg/). Coming to App Store [soon](https://github.com/webuildsg/iOS/issues/5)!
+> iOS client for iPhone and iPad to display the data from [We Build SG](https://webuild.sg/). Download from the [App Store](https://itunes.apple.com/us/app/we-build-sg/id1089421487?mt=8)!
 
 ## Quick start
 
