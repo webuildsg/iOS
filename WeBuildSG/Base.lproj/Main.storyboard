@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqR-5k-Mpy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqR-5k-Mpy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,24 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="90" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-G6-2iP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="68" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KaO-G6-2iP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="90" id="YBI-f2-uIT" customClass="TableViewCell" customModule="WeBuildSG" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="113.5" width="600" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="68" id="YBI-f2-uIT" customClass="TableViewCell" customModule="WeBuildSG" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YBI-f2-uIT" id="GTK-pk-uaM">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqf-zc-T31">
-                                                    <rect key="frame" x="8" y="8" width="551" height="51.5"/>
+                                                    <rect key="frame" x="15" y="15" width="544" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="UFZ-bw-PkQ"/>
                                                         <constraint firstAttribute="height" constant="21" id="vcL-CF-yrT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" red="0.8784313725490196" green="0.38039215686274508" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -48,21 +48,21 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-Dl-b2X">
-                                                    <rect key="frame" x="8" y="67" width="551" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="15" y="42.5" width="544" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="leadingMargin" secondItem="kqf-zc-T31" secondAttribute="leading" id="D04-nY-8CH"/>
+                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="leading" secondItem="GTK-pk-uaM" secondAttribute="leadingMargin" constant="7" id="6M2-Di-23W"/>
+                                                <constraint firstItem="kqf-zc-T31" firstAttribute="top" secondItem="GTK-pk-uaM" secondAttribute="topMargin" constant="7" id="BfB-H8-7NF"/>
                                                 <constraint firstItem="xfs-Dl-b2X" firstAttribute="top" secondItem="kqf-zc-T31" secondAttribute="bottom" constant="32" id="Dhn-uq-faL"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="xfs-Dl-b2X" secondAttribute="bottom" id="LnS-Je-TRo"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="xfs-Dl-b2X" secondAttribute="leading" id="PNG-zQ-pJi"/>
-                                                <constraint firstAttribute="topMargin" secondItem="kqf-zc-T31" secondAttribute="top" id="aBb-oy-Cyn"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="xfs-Dl-b2X" secondAttribute="trailing" id="dh2-CJ-O0K"/>
-                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="top" secondItem="kqf-zc-T31" secondAttribute="bottom" constant="8" symbolic="YES" id="itf-97-AqR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="kqf-zc-T31" secondAttribute="trailing" id="mmD-ql-6Vv"/>
+                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="top" secondItem="kqf-zc-T31" secondAttribute="bottom" constant="8" id="O0w-IJ-kK9"/>
+                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="bottom" secondItem="GTK-pk-uaM" secondAttribute="bottomMargin" id="ODY-iL-eni"/>
+                                                <constraint firstItem="kqf-zc-T31" firstAttribute="trailing" secondItem="GTK-pk-uaM" secondAttribute="trailingMargin" id="Sr6-ft-xWQ"/>
+                                                <constraint firstItem="xfs-Dl-b2X" firstAttribute="trailing" secondItem="GTK-pk-uaM" secondAttribute="trailingMargin" id="W67-qy-SWe"/>
+                                                <constraint firstItem="kqf-zc-T31" firstAttribute="leading" secondItem="GTK-pk-uaM" secondAttribute="leadingMargin" constant="7" id="mfK-yO-JEu"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">

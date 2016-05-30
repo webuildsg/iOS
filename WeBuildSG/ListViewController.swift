@@ -24,7 +24,15 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         getData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ListViewController.onContentSizeChanged), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        
     }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     
     func getData() {
         SectionsData().getSectionsFromData({
@@ -65,7 +73,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as? TableViewCell
         
-        cell!.titleLabel!.text = sections[indexPath.section].objects[indexPath.row].name
+        cell?.titleLabel.text = sections[indexPath.section].objects[indexPath.row].name
         
         let type = sections[indexPath.section].objects[indexPath.row].type
         let date = sections[indexPath.section].objects[indexPath.row].date
@@ -75,6 +83,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             cell!.datetimeLabel!.text = "updated " + date
         }
+        
+        cell?.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        cell?.datetimeLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         
         return cell!
     }
@@ -134,5 +145,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    func onContentSizeChanged(){
+        self.tableView.reloadData()
+    }
+
 }
 

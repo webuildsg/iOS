@@ -188,7 +188,6 @@
 				TargetAttributes = {
 					ABB7CAFB1C6338DE00352827 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 29W9A4NCQJ;
 					};
 					ABB7CB0F1C6338DE00352827 = {
 						CreatedOnToolsVersion = 7.2;
